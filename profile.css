@@ -1,0 +1,66 @@
+/* ======== Profil Section ======== */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+.profile-card {
+  background: #2b2b2f;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  transition: background 0.4s ease;
+}
+
+/* Mode Terang */
+body.dark .profile-card {
+  background: #fff;
+  color: #1c1c1e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card h3 {
+  color: #ffb300;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  line-height: 1.6;
+}
+
+.hobbies {
+  list-style: square;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-card {
+    width: 90%;
+  }
+}

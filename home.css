@@ -1,0 +1,93 @@
+/* ======== Hero Section ======== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 10%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("img/bg-home.jpg") center/cover no-repeat;
+  color: #fff;
+  border-radius: 15px;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #ffb300;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.btn-utama {
+  background-color: #ffb300;
+  color: #1c1c1e;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn-utama:hover {
+  background-color: #ffc947;
+  transform: scale(1.05);
+}
+
+/* ======== Section Isi ======== */
+.intro {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.intro h2 {
+  color: #ffb300;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+/* ======== Responsif ======== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 8%;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+/* ======== Mode Terang (Dark Mode Invers) ======== */
+body.dark .hero {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("img/bg-home.jpg") center/cover no-repeat;
+  color: #1c1c1e;
+}
+
+body.dark .btn-utama {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.dark .btn-utama:hover {
+  background-color: #3399ff;
+}

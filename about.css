@@ -1,0 +1,157 @@
+/* ====== Gaya Umum ====== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: #f5f5f5;
+  transition: background 0.3s, color 0.3s;
+}
+
+main {
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* ====== HERO SECTION ====== */
+.about-hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  background: #1c1c1c;
+  color: #ffb300;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 100px auto 60px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.about-hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ====== KONTEN UTAMA ====== */
+.about-content {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-content h3 {
+  font-size: 1.7rem;
+  color: #ffb300;
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+/* ====== KARTU TEKNOLOGI ====== */
+.about-content ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-card {
+  background: #1f1f1f;
+  width: 280px;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 22px rgba(255, 179, 0, 0.3);
+}
+
+.tech-card i {
+  font-size: 3rem;
+  color: #ffb300;
+  margin-bottom: 10px;
+}
+
+.tech-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #ffb300;
+  font-weight: bold;
+}
+
+.tech-card p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 60px;
+  background: #222;
+  color: #aaa;
+}
+
+/* ====== MODE TERANG ====== */
+body.dark-mode {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.dark-mode .about-hero {
+  background: #fafafa;
+  color: #ffb300;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .about-hero p {
+  color: #333;
+}
+
+body.dark-mode .tech-card {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .tech-card p {
+  color: #333;
+}
+
+body.dark-mode footer {
+  background: #ddd;
+  color: #222;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 20px 60px;
+  }
+
+  .about-hero h2 {
+    font-size: 2rem;
+  }
+
+  .tech-card {
+    width: 90%;
+  }
+}

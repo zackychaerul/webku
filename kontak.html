@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - WebKu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="kontak.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">WebKu</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="galery.html">Gallery</a></li>
+          <li><a href="tugas.html">Tugas</a></li>
+          <li><a href="kontak.html" class="active">Kontak</a></li>
+        </ul>
+        <div class="menu-group">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <button id="darkModeBtn" class="dark-toggle">🌙</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <h2>Hubungi Saya 📬</h2>
+      <p>
+        Ingin berkolaborasi, berdiskusi, atau sekadar menyapa? Kirimkan pesanmu
+        melalui form di bawah ini.
+      </p>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="contact-container">
+      <!-- Formulir Kontak -->
+      <div class="contact-form">
+        <h3>Kirim Pesan</h3>
+        <form onsubmit="return kirimPesan(event)">
+          <div class="form-group">
+            <label for="nama"><i class="fas fa-user"></i> Nama</label>
+            <input
+              type="text"
+              id="nama"
+              placeholder="Masukkan nama kamu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Masukkan email kamu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="pesan"><i class="fas fa-comment-dots"></i> Pesan</label>
+            <textarea
+              id="pesan"
+              rows="4"
+              placeholder="Tulis pesan di sini..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Kirim Pesan
+          </button>
+        </form>
+      </div>
+
+      <!-- Info Kontak -->
+      <div class="contact-info">
+        <h3>Informasi Kontak</h3>
+
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>chaerulzacky38@gmail.com</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Tangerang, Indonesia</p>
+        </div>
+
+        <div class="info-item">
+          <i class="fab fa-instagram"></i>
+          <p>
+            <a href="https://instagram.com/zacky_38" target="_blank"
+              >@zacky_38</a
+            >
+          </p>
+        </div>
+
+        <div class="info-item">
+          <i class="fab fa-github"></i>
+          <p>
+            <a href="https://github.com/chaerulzacky" target="_blank"
+              >github.com/chaerulzacky</a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 WebKu - Dibuat oleh Zacky</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Efek notifikasi setelah kirim pesan
+      function kirimPesan(e) {
+        e.preventDefault();
+        alert(
+          "Pesan kamu sudah terkirim ✅ Terima kasih telah menghubungi saya!"
+        );
+        e.target.reset();
+        return false;
+      }
+    </script>
+  </body>
+</html>
