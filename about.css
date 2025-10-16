@@ -1,117 +1,157 @@
-/* ===== Hero Section ===== */
-.about-hero {
-  text-align: center;
-  padding: 80px 20px 60px;
-  background: linear-gradient(135deg, #ffb300, #ff9800);
-  color: #1c1c1e;
-  border-radius: 0 0 50px 50px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: fadeDown 1s ease-out;
+/* ====== Gaya Umum ====== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: #f5f5f5;
+  transition: background 0.3s, color 0.3s;
 }
 
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+main {
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* ====== HERO SECTION ====== */
+.about-hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  background: #1c1c1c;
+  color: #ffb300;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 100px auto 60px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
 }
 
 .about-hero h2 {
-  font-size: 2.5em;
+  font-size: 2.4rem;
   margin-bottom: 15px;
-  font-weight: 700;
 }
 
 .about-hero p {
-  font-size: 1.1em;
-  max-width: 600px;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  max-width: 750px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* ===== Konten Utama ===== */
+/* ====== KONTEN UTAMA ====== */
 .about-content {
-  padding: 60px 10%;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
   text-align: center;
-  animation: fadeIn 1s ease;
 }
 
 .about-content h3 {
+  font-size: 1.7rem;
   color: #ffb300;
-  margin-bottom: 20px;
-  font-size: 1.8em;
+  margin-bottom: 25px;
 }
 
+.about-content p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+/* ====== KARTU TEKNOLOGI ====== */
 .about-content ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   list-style: none;
-  margin-top: 25px;
+  padding: 0;
 }
 
-/* ===== Kartu Teknologi ===== */
 .tech-card {
-  background: #2b2b2f;
-  color: #e0e0e0;
-  padding: 25px 20px;
-  border-radius: 15px;
-  width: 180px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  background: #1f1f1f;
+  width: 280px;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tech-card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
-}
-
-.tech-card h4 {
-  margin-top: 10px;
-  color: #ffb300;
-  font-size: 1.2em;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 22px rgba(255, 179, 0, 0.3);
 }
 
 .tech-card i {
-  font-size: 2.5em;
+  font-size: 3rem;
   color: #ffb300;
+  margin-bottom: 10px;
 }
 
-/* Mode Terang */
-body.dark .tech-card {
-  background: #fff;
-  color: #1c1c1e;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.tech-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #ffb300;
+  font-weight: bold;
 }
 
-body.dark .tech-card h4 {
-  color: #007bff;
+.tech-card p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-/* ===== Animasi Masuk ===== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 60px;
+  background: #222;
+  color: #aaa;
+}
+
+/* ====== MODE TERANG ====== */
+body.dark-mode {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.dark-mode .about-hero {
+  background: #fafafa;
+  color: #ffb300;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .about-hero p {
+  color: #333;
+}
+
+body.dark-mode .tech-card {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .tech-card p {
+  color: #333;
+}
+
+body.dark-mode footer {
+  background: #ddd;
+  color: #222;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 20px 60px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* ===== Responsif ===== */
-@media (max-width: 600px) {
   .about-hero h2 {
-    font-size: 1.8em;
+    font-size: 2rem;
   }
 
   .tech-card {
-    width: 100%;
+    width: 90%;
   }
 }
