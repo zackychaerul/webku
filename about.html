@@ -3,19 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - WebKu</title>
-    <!-- CSS umum -->
+    <title>Tentang - WebKu</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- CSS khusus halaman About -->
     <link rel="stylesheet" href="about.css" />
-    <!-- Ikon FontAwesome -->
     <script
-      src="https://kit.fontawesome.com/a076d05399.js"
+      src="https://kit.fontawesome.com/a2d9d6d7e3.js"
       crossorigin="anonymous"
     ></script>
   </head>
 
   <body>
+    <!-- 🌠 Efek bintang bergerak -->
+    <div class="stars"></div>
+    <div
+      class="star"
+      style="top: 15%; left: 25%; width: 2px; height: 2px"
+    ></div>
+    <div
+      class="star"
+      style="top: 45%; left: 60%; width: 3px; height: 3px"
+    ></div>
+    <div
+      class="star"
+      style="top: 70%; left: 80%; width: 2px; height: 2px"
+    ></div>
+
     <header>
       <nav class="navbar">
         <h1 class="logo">WebKu</h1>
@@ -29,56 +41,83 @@
         </ul>
         <div class="menu-group">
           <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
           </div>
-        <button id="darkModeBtn" class="dark-toggle">🌙</button>
+          <button id="darkModeBtn" class="dark-toggle">🌙</button>
+        </div>
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="about-hero">
-      <h2>Tentang Website Ini</h2>
-      <p>
-        Website ini dibuat sebagai proyek latihan pemrograman web. Di dalamnya
-        terdapat berbagai halaman yang menampilkan profil, galeri, tugas, dan
-        kontak.
-    </section>
+    <main class="content fade-in">
+      <section class="about-hero reveal">
+        <h2>Kenali Lebih Dalam Tentang Saya</h2>
+        <p>
+          Halo! Saya Zacky, seorang pengembang web yang gemar memadukan
+          <strong>teknologi, kreativitas, dan desain</strong> menjadi sesuatu
+          yang fungsional dan indah. Saya percaya bahwa kode adalah bentuk seni
+          modern — dan setiap barisnya bisa bercerita.
+        </p>
+      </section>
 
-    <!-- Konten -->
-    <main class="about-content">
-      <h3>Teknologi yang Digunakan</h3>
-      <ul>
-        <li class="tech-card">
-          <i class="fab fa-html5"></i>
-          <h4>HTML5</h4>
-          <p>Untuk membangun struktur dan isi halaman website.</p>
-        </li>
-        <li class="tech-card">
-          <i class="fab fa-css3-alt"></i>
-          <h4>CSS3</h4>
-          <p>Memberikan tampilan yang indah dan animasi interaktif.</p>
-        </li>
-        <li class="tech-card">
-          <i class="fab fa-js-square"></i>
-          <h4>JavaScript</h4>
-          <p>Menambahkan interaktivitas dan mode gelap–terang.</p>
-        </li>
-      </ul>
+      <section class="about-content">
+        <h3 class="reveal">Teknologi yang Saya Gunakan</h3>
+        <p class="reveal">
+          Berikut beberapa teknologi dan alat yang sering saya gunakan dalam
+          membangun website modern dan interaktif:
+        </p>
 
-      <h3>Tujuan Website</h3>
-      <p>
-        Tujuan utama website ini adalah menjadi sarana belajar pemrograman web,
-        eksplorasi desain, dan dokumentasi proyek yang saya kerjakan selama
-        perkuliahan.
-      </p>
+        <ul>
+          <li class="tech-card reveal">
+            <i class="fab fa-html5"></i>
+            <h4>HTML5</h4>
+            <p>Membangun struktur website yang rapi, semantik, dan efisien.</p>
+          </li>
+
+          <li class="tech-card reveal">
+            <i class="fab fa-css3-alt"></i>
+            <h4>CSS3</h4>
+            <p>
+              Mendesain tampilan website dengan animasi dan layout yang
+              responsif.
+            </p>
+          </li>
+
+          <li class="tech-card reveal">
+            <i class="fab fa-js"></i>
+            <h4>JavaScript</h4>
+            <p>
+              Menambahkan interaktivitas dan logika pada website agar lebih
+              hidup.
+            </p>
+          </li>
+
+          <li class="tech-card reveal">
+            <i class="fab fa-react"></i>
+            <h4>React</h4>
+            <p>
+              Membangun antarmuka pengguna yang dinamis dan efisien dengan
+              komponen modern.
+            </p>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer>
       <p>&copy; 2025 WebKu - Dibuat oleh Zacky</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // === Efek Muncul Saat Scroll ===
+      const reveals = document.querySelectorAll(".reveal");
+      window.addEventListener("scroll", () => {
+        for (let el of reveals) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add("active");
+          }
+        }
+      });
+    </script>
   </body>
 </html>

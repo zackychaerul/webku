@@ -1,66 +1,315 @@
-/* ======== Profil Section ======== */
+/* ========================================================== */
+/* 🌌 Background Animasi Bintang Bergerak */
+/* ========================================================== */
+body {
+  position: relative;
+  overflow-x: hidden;
+  background: radial-gradient(circle at top, #0b0b17, #000);
+}
+
+.stars,
+.stars::before,
+.stars::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent
+    url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation: moveStars 100s linear infinite;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.stars::before {
+  animation-duration: 200s;
+  opacity: 0.4;
+  transform: scale(0.8);
+}
+
+.stars::after {
+  animation-duration: 60s;
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+@keyframes moveStars {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-500px, 500px);
+  }
+}
+
+/* ✨ Efek Bintang Berkelap-Kelip */
+.star {
+  position: fixed;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+/* ========================================================== */
+/* 🌟 PROFIL SECTION */
+/* ========================================================== */
 .profile-section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 50px;
+  margin: 70px auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 179, 0, 0.15),
+    transparent 70%
+  );
+  z-index: -1;
+  filter: blur(50px);
+}
+
+/* Foto profil dengan orbit */
+.profile-photo-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 .profile-photo {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 4px solid #ffb300;
+  box-shadow: 0 0 25px rgba(255, 179, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .profile-photo:hover {
-  transform: scale(1.07);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(255, 179, 0, 0.6);
 }
 
+.profile-photo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px dashed rgba(255, 179, 0, 0.4);
+  animation: rotateOrbit 10s linear infinite;
+}
+
+@keyframes rotateOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Kartu Profil */
 .profile-card {
-  background: #2b2b2f;
-  padding: 25px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: rgba(43, 43, 47, 0.9);
+  padding: 30px 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
   max-width: 500px;
-  transition: background 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-/* Mode Terang */
-body.dark .profile-card {
-  background: #fff;
-  color: #1c1c1e;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 179, 0, 0.3);
 }
 
 .profile-card h3 {
   color: #ffb300;
-  margin-bottom: 10px;
+  font-size: 1.6em;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
 .profile-card p {
+  line-height: 1.7;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+/* Mode terang */
+body.dark-mode .profile-card {
+  background: #fff;
+  color: #1c1c1e;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .profile-card h3 {
+  color: #ffb300;
+}
+
+body.dark-mode .profile-card p {
+  color: #333;
+}
+
+/* ========================================================== */
+/* 🎨 HOBBY / KETERAMPILAN SECTION */
+/* ========================================================== */
+
+.hobby-section {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hobby-section h2 {
+  font-size: 2em;
+  color: #ffb300;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.hobby-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: auto;
+}
+
+.hobby-card {
+  background: rgba(40, 40, 44, 0.9);
+  border-radius: 16px;
+  padding: 25px 20px 30px;
+  color: #f5f5f5;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 179, 0, 0.4);
+}
+
+.hobby-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease;
+}
+
+.hobby-card:hover img {
+  transform: scale(1.05);
+}
+
+.hobby-card h3 {
+  color: #ffb300;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.hobby-card p {
+  font-size: 0.95em;
   line-height: 1.6;
+  color: #e0e0e0;
 }
 
-.hobbies {
-  list-style: square;
-  margin-left: 20px;
-  margin-top: 10px;
+.hobby-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 179, 0, 0.15), transparent 70%);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
+.hobby-card:hover::before {
+  opacity: 1;
+}
+
+/* Mode terang */
+body.dark-mode .hobby-card {
+  background: #ffffff;
+  color: #1c1c1e;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .hobby-card h3 {
+  color: #ffb300;
+}
+
+body.dark-mode .hobby-card p {
+  color: #333;
+}
+
+/* ========================================================== */
 /* Responsif */
+/* ========================================================== */
 @media (max-width: 768px) {
   .profile-section {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
   }
 
   .profile-card {
     width: 90%;
+  }
+
+  .profile-photo-wrapper::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hobby-section h2 {
+    font-size: 1.6em;
+  }
+
+  .hobby-card img {
+    height: 160px;
   }
 }

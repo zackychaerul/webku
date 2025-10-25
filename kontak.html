@@ -3,22 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontak - WebKu</title>
+    <title>Kontak Saya - WebSaya</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="kontak.css" />
     <script
-      src="https://kit.fontawesome.com/a076d05399.js"
+      src="https://kit.fontawesome.com/a2d9d6d7e3.js"
       crossorigin="anonymous"
     ></script>
   </head>
 
   <body>
+    <!-- 🌠 Efek bintang bergerak -->
+    <div class="stars"></div>
+    <div
+      class="star"
+      style="top: 15%; left: 25%; width: 2px; height: 2px"
+    ></div>
+    <div
+      class="star"
+      style="top: 45%; left: 70%; width: 3px; height: 3px"
+    ></div>
+    <div
+      class="star"
+      style="top: 75%; left: 80%; width: 2px; height: 2px"
+    ></div>
+
     <header>
       <nav class="navbar">
-        <h1 class="logo">WebKu</h1>
+        <h1 class="logo">TugasCihuy</h1>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="profil.html">Profil</a></li>
+          <li><a href="Profil.html">Profil</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="galery.html">Gallery</a></li>
           <li><a href="Tugas.html">Tugas</a></li>
@@ -26,115 +41,90 @@
         </ul>
         <div class="menu-group">
           <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
           </div>
           <button id="darkModeBtn" class="dark-toggle">🌙</button>
         </div>
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
-      <h2>Hubungi Saya 📬</h2>
-      <p>
-        Ingin berkolaborasi, berdiskusi, atau sekadar menyapa? Kirimkan pesanmu
-        melalui form di bawah ini.
-      </p>
-    </section>
+    <main>
+      <section class="contact-hero fade-in">
+        <h2>Hubungi Saya</h2>
+        <p>
+          Butuh bantuan, kerja sama, atau sekadar ngobrol santai? Kirim pesan
+          lewat form di bawah ini 📩
+        </p>
+      </section>
 
-    <!-- Konten Utama -->
-    <main class="contact-container">
-      <!-- Formulir Kontak -->
-      <div class="contact-form">
-        <h3>Kirim Pesan</h3>
-        <form onsubmit="return kirimPesan(event)">
+      <section class="contact-container">
+        <!-- Formulir Kontak -->
+        <form class="contact-form reveal">
+          <h3>Kirim Pesan</h3>
           <div class="form-group">
-            <label for="nama"><i class="fas fa-user"></i> Nama</label>
-            <input
-              type="text"
-              id="nama"
-              placeholder="Masukkan nama kamu"
-              required
-            />
+            <label><i class="fas fa-user"></i> Nama</label>
+            <input type="text" placeholder="Masukkan nama kamu" required />
           </div>
 
           <div class="form-group">
-            <label for="email"><i class="fas fa-envelope"></i> Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Masukkan email kamu"
-              required
-            />
+            <label><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" placeholder="Masukkan email kamu" required />
           </div>
 
           <div class="form-group">
-            <label for="pesan"><i class="fas fa-comment-dots"></i> Pesan</label>
+            <label><i class="fas fa-comment"></i> Pesan</label>
             <textarea
-              id="pesan"
-              rows="4"
-              placeholder="Tulis pesan di sini..."
+              rows="5"
+              placeholder="Tulis pesanmu di sini..."
               required
             ></textarea>
           </div>
 
           <button type="submit">
-            <i class="fas fa-paper-plane"></i> Kirim Pesan
+            <i class="fas fa-paper-plane"></i> Kirim
           </button>
         </form>
-      </div>
 
-      <!-- Info Kontak -->
-      <div class="contact-info">
-        <h3>Informasi Kontak</h3>
-
-        <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <p>chaerulzacky38@gmail.com</p>
-        </div>
-
-        <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>Tangerang, Indonesia</p>
-        </div>
-
-        <div class="info-item">
-          <i class="fab fa-instagram"></i>
-          <p>
-            <a href="https://instagram.com/zacky_38" target="_blank"
-              >@zacky_38</a
+        <!-- Info Kontak -->
+        <div class="contact-info reveal">
+          <h3>Informasi Kontak</h3>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Bandung, Indonesia</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+6281234567890">+62 812-3456-7890</a>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:zacky@example.com">zacky@example.com</a>
+          </div>
+          <div class="info-item">
+            <i class="fab fa-instagram"></i>
+            <a href="https://instagram.com/zackychaerul" target="_blank"
+              >@zackychaerul</a
             >
-          </p>
+          </div>
         </div>
-
-        <div class="info-item">
-          <i class="fab fa-github"></i>
-          <p>
-            <a href="https://github.com/chaerulzacky" target="_blank"
-              >github.com/chaerulzacky</a
-            >
-          </p>
-        </div>
-      </div>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 WebKu - Dibuat oleh Zacky</p>
+      <p>&copy; 2025 WebSaya — Dibuat oleh Zacky</p>
     </footer>
 
-    <script src="script.js"></script>
     <script>
-      // Efek notifikasi setelah kirim pesan
-      function kirimPesan(e) {
-        e.preventDefault();
-        alert(
-          "Pesan kamu sudah terkirim ✅ Terima kasih telah menghubungi saya!"
-        );
-        e.target.reset();
-        return false;
-      }
+      // Efek muncul saat scroll
+      const reveals = document.querySelectorAll(".reveal");
+      window.addEventListener("scroll", () => {
+        for (let el of reveals) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add("active");
+          }
+        }
+      });
     </script>
   </body>
 </html>

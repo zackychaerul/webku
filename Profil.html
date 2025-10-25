@@ -4,13 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil - WebKu</title>
-    <!-- CSS umum -->
+    <!-- CSS utama -->
     <link rel="stylesheet" href="style.css" />
-    <!-- CSS khusus halaman profil -->
+    <!-- CSS khusus profil -->
     <link rel="stylesheet" href="profile.css" />
   </head>
 
   <body>
+    <!-- 🌠 Efek bintang bergerak -->
+    <div class="stars"></div>
+    <div
+      class="star"
+      style="top: 10%; left: 20%; width: 2px; height: 2px"
+    ></div>
+    <div
+      class="star"
+      style="top: 30%; left: 50%; width: 3px; height: 3px"
+    ></div>
+    <div
+      class="star"
+      style="top: 70%; left: 80%; width: 2px; height: 2px"
+    ></div>
+    <div
+      class="star"
+      style="top: 50%; left: 10%; width: 4px; height: 4px"
+    ></div>
+    <div
+      class="star"
+      style="top: 85%; left: 40%; width: 3px; height: 3px"
+    ></div>
+
     <header>
       <nav class="navbar">
         <h1 class="logo">WebKu</h1>
@@ -28,32 +51,65 @@
             <span></span>
             <span></span>
           </div>
-        <button id="darkModeBtn" class="dark-toggle">🌙</button>
-        
+          <button id="darkModeBtn" class="dark-toggle">🌙</button>
+        </div>
       </nav>
     </header>
 
     <main class="content fade-in">
-      <h2>Tentang Saya</h2>
+      <h2 style="text-align: center; color: #ffb300; margin-top: 30px">
+        Tentang Saya
+      </h2>
 
+      <!-- Bagian Profil Utama -->
       <section class="profile-section">
-        <img src="img/foto1.jpg" alt="Foto Profil" class="profile-photo" />
+        <div class="profile-photo-wrapper">
+          <img src="img/foto1.jpg" alt="Foto Profil" class="profile-photo" />
+        </div>
 
         <div class="profile-card">
           <h3>Halo, saya Zacky 👋</h3>
           <p>
-            Saya senang belajar tentang <strong>teknologi, desain,</strong> dan
-            <strong>pemrograman web</strong>. Website ini saya buat untuk
-            menampilkan karya, hobi, dan proyek saya secara menarik dan
-            interaktif.
+            Saya mahasiswa Informatika yang senang belajar tentang
+            <strong>teknologi, desain,</strong> dan
+            <strong>pemrograman web</strong>. Website ini menjadi wadah untuk
+            menampilkan karya, hobi, dan eksperimen kreatif saya.
           </p>
+        </div>
+      </section>
 
-          <p><strong>Hobi saya:</strong></p>
-          <ul class="hobbies">
-            <li>Desain web & UI/UX</li>
-            <li>Fotografi</li>
-            <li>Menjelajah alam</li>
-          </ul>
+      <!-- 🌟 Bagian Minat & Keterampilan -->
+      <section class="hobby-section fade-in">
+        <h2>Minat & Keterampilan</h2>
+        <div class="hobby-container">
+          <div class="hobby-card">
+            <img src="img/ngoding.jpg" alt="Ngoding" />
+            <h3>💻 Ngoding</h3>
+            <p>
+              Saya suka membangun website interaktif dan responsive menggunakan
+              HTML, CSS, JavaScript, dan React. Coding bagi saya adalah seni
+              berpikir logis.
+            </p>
+          </div>
+
+          <div class="hobby-card">
+            <img src="img/desain.jpg" alt="Desain Web" />
+            <h3>🎨 Desain Web</h3>
+            <p>
+              Menggabungkan estetika dan fungsi — saya mendesain antarmuka web
+              yang modern dan nyaman dipakai, berfokus pada user experience.
+            </p>
+          </div>
+
+          <div class="hobby-card">
+            <img src="img/foto.jpg" alt="Fotografi" />
+            <h3>📸 Fotografi</h3>
+            <p>
+              Saya gemar mengabadikan momen alam dan kehidupan sehari-hari
+              dengan pendekatan artistik. Fotografi membuat saya lebih peka
+              terhadap detail.
+            </p>
+          </div>
         </div>
       </section>
     </main>
